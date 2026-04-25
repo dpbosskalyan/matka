@@ -16,11 +16,13 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1957761351758363');
+    fbq('init', '1276987793816881'); // Added new pixel ID
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1957761351758363&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1957761351758363&ev=PageView&noscript=1"/>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1276987793816881&ev=PageView&noscript=1"/>
+    </noscript>
     <!-- End Meta Pixel Code -->
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -297,6 +299,7 @@
             btn.style.opacity = "0.7";
             btn.innerHTML = "Opening Telegram...";
 
+            // Track Lead for both pixels if possible
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Lead');
             }
